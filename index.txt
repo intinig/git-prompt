@@ -27,8 +27,8 @@ image:screenshot-prompt-git.png[git module screenshot]
 | *Branch*                 |   *File*                 | *Meaning*
 | [darkblue]#dark blue#    |                          | Clean repo
 | [green]#green#           |  [green]#green#          | Modified or new file. Modifications are in index but not in repo yet.
-| [#cc0000]#dark red#      |  [#cc0000]#dark red#     | Modified and tracked by repo, but modifications not added to index yet.
-| [blue]#light blue#       |  [blue]#light blue#      | Untracked file.
+| [darkred]#dark red#      |  [darkred]#dark red#     | Modified and tracked by repo, but modifications not added to index yet.
+| [lightblue]#light blue#  |  [lightblue]#light blue#      | Untracked file.
 | [red]#light red#         |                          | Detached Head
 | [magenta]#magenta#       |                          | In middle of doing something 
 |================================================================
@@ -85,16 +85,6 @@ cd
 j t     # same as  cd /var/tmp
 j .*3   # same as  cd "~/long dir mp3"
 -------------
-
-
-== Bash Completion
-
-Completion can be done for git subcommands, branches and remotes:
-
----------------------
-git ch<tab>   		#  expands to git checkout
-git checkout ma<tab>	#  expands to git checkout master
---------------------
 
 
 == Install
@@ -168,11 +158,7 @@ dependencies are standard unix utils.
 
 == Todo
 
-* Subshells number indicator. Don't know how to do this. There is bash
-  `"\j"`, but let say I want `">>"` after path instead of `">"` when I have 2 jobs 
-  running. Running `+++`jobs | ... `+++` is extra bash fork, hate to do this. 
 * VIM module needs to be moved out of GIT module
-
 
 include::../volnitsky.com/project/howto-submit-patch.txt[]
 
